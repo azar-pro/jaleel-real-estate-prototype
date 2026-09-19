@@ -87,3 +87,41 @@
     font-size:14px;
   }
 }
+
+
+/* Featured opportunities refinement */
+#properties.section-space{padding-top:72px;padding-bottom:82px}
+#properties .section-title{margin-bottom:30px;align-items:flex-end}
+#properties .section-title>div{max-width:520px}
+#properties .section-title p{max-width:360px;line-height:1.8}
+#properties .properties-grid{gap:20px 22px}
+#properties .property-card{border-radius:18px}
+#properties .property-image{height:252px}
+#properties .property-image img{object-position:center 52%}
+#properties .property-card:nth-child(1) .property-image img{object-position:center 58%}
+#properties .property-card:nth-child(2) .property-image img{object-position:center 46%}
+#properties .property-card:nth-child(3) .property-image img{object-position:center 43%}
+#properties .property-card:nth-child(4) .property-image img{object-position:center 48%}
+#properties .property-card:nth-child(5) .property-image img{object-position:center 38%}
+#properties .property-card:nth-child(6) .property-image img{object-position:center 45%}
+#properties .status,
+#properties .type-pill{top:13px;padding:6px 10px;font-size:9px;letter-spacing:.01em}
+#properties .property-body{padding:18px 20px 19px}
+#properties .property-body h3{font-size:21px;line-height:1.35;margin:9px 0 12px}
+#properties .meta-line{font-size:10.5px}
+#properties .features{gap:7px}
+#properties .features span{padding:5px 9px;font-size:10.5px}
+#properties .price-line{margin-top:16px;padding-top:14px}
+#properties .price-line strong{font-size:15px;white-space:nowrap;unicode-bidi:isolate}
+#properties .price-line a{font-size:11.5px;font-weight:600;display:inline-flex;align-items:center;gap:5px}
+#properties .price-line a{transition:transform .25s ease}
+#properties .price-line a:hover{transform:translateX(-3px)}
+
+@media(max-width:1050px){
+  #properties.section-space{padding-top:64px;padding-bottom:72px}
+}
+@media(max-width:720px){
+  #properties.section-space{padding-top:54px;padding-bottom:64px}
+  #properties .section-title{margin-bottom:24px}
+  #properties .property-image{height:250px}
+}
