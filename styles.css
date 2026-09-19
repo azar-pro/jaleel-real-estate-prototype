@@ -424,3 +424,64 @@
 #requests .request-info small{
   color:var(--muted);
 }
+
+
+/* Why Jaleel section refinement */
+.why.section-space{
+  padding-top:72px;
+  padding-bottom:76px;
+}
+.why-grid{
+  gap:64px;
+  align-items:start;
+}
+.why-grid>div:first-child{
+  padding-top:4px;
+}
+.why-list>div{
+  grid-template-columns:44px 1fr;
+  padding:18px 0;
+}
+.why-list b{
+  font-size:9px;
+  align-self:start;
+  padding-top:4px;
+}
+.why-list span{
+  gap:18px;
+  align-items:start;
+}
+.why-list strong{
+  font-size:18px;
+  line-height:1.45;
+}
+.why-list small{
+  font-size:12.5px;
+  line-height:1.7;
+  color:#65706b;
+}
+@media(max-width:1050px){
+  .why.section-space{
+    padding-top:64px;
+    padding-bottom:68px;
+  }
+  .why-grid{
+    gap:44px;
+  }
+}
+@media(max-width:720px){
+  .why.section-space{
+    padding-top:54px;
+    padding-bottom:60px;
+  }
+  .why-grid{
+    gap:26px;
+  }
+  .why-list>div{
+    grid-template-columns:36px 1fr;
+    padding:16px 0;
+  }
+  .why-list span{
+    gap:10px;
+  }
+}
