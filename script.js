@@ -18,10 +18,65 @@ if(filterToggle&&finder){
 }
 
 const form=document.querySelector('#finderForm');
-if(form){
+const propertyCards=[...document.querySelectorAll('#properties .property-card')];
+const finderResults=document.querySelector('#finderResults');
+
+if(form&&propertyCards.length){
+  const normalizeArabic=value=>(value||'')
+    .trim()
+    .toLowerCase()
+    .replace(/[أإآ]/g,'ا')
+    .replace(/ى/g,'ي')
+    .replace(/ة/g,'ه');
+
+  const priceMatches=(price,bucket)=>{
+    if(bucket==='under1') return price<=1000000;
+    if(bucket==='1to5') return price>=1000000&&price<=5000000;
+    if(bucket==='5plus') return price>5000000;
+    return true;
+  };
+
   form.addEventListener('submit',e=>{
     e.preventDefault();
-    document.querySelector('#properties')?.scrollIntoView({behavior:'smooth'});
+
+    const data=new FormData(form);
+    const demand=data.get('demand');
+    const type=data.get('type');
+    const city=data.get('city');
+    const district=normalizeArabic(data.get('district'));
+    const priceBucket=data.get('price');
+
+    let visibleCount=0;
+
+    propertyCards.forEach(card=>{
+      const demands=(card.dataset.demand||'').split(' ');
+      const cardType=card.dataset.type||'';
+      const cardCity=card.dataset.city||'';
+      const cardDistrict=normalizeArabic(card.dataset.district);
+      const cardPrice=Number(card.dataset.price||0);
+
+      const matchesDemand=demands.includes(demand);
+      const matchesType=type==='الكل'||cardType===type;
+      const matchesCity=!city||cardCity===city;
+      const matchesDistrict=!district||cardDistrict.includes(district)||district.includes(cardDistrict);
+      const matchesPrice=priceMatches(cardPrice,priceBucket);
+      const matches=matchesDemand&&matchesType&&matchesCity&&matchesDistrict&&matchesPrice;
+
+      card.hidden=!matches;
+      if(matches){
+        visibleCount++;
+        card.classList.add('visible');
+      }
+    });
+
+    if(finderResults){
+      finderResults.textContent=visibleCount
+        ? `تم العثور على ${visibleCount} ${visibleCount===1?'فرصة مطابقة':'فرص مطابقة'}`
+        : 'لا توجد نتائج مطابقة لهذه الخيارات حاليًا.';
+      finderResults.classList.toggle('is-empty',visibleCount===0);
+    }
+
+    document.querySelector('#properties')?.scrollIntoView({behavior:'smooth',block:'start'});
   });
 }
 
