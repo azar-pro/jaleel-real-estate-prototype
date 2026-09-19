@@ -168,3 +168,24 @@
   filter:brightness(.95) contrast(1.04) saturate(.96);
 }
 #investment .investment-image:hover img{transform:scale(1.86)}
+
+
+/* Final approved property imagery */
+.hero .image-frame img{
+  object-fit:cover;
+  object-position:center 58%;
+  transform:none;
+  filter:brightness(.94) contrast(1.045) saturate(.94);
+}
+.hero .hero-media:hover .image-frame img{transform:scale(1.03)}
+#investment .investment-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+  transform:none;
+  transform-origin:center center;
+  filter:brightness(.96) contrast(1.035) saturate(.97);
+  transition:transform .6s ease;
+}
+#investment .investment-image:hover img{transform:scale(1.03)}
