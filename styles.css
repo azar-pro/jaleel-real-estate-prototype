@@ -661,3 +661,51 @@
     padding:22px;
   }
 }
+
+
+/* Contact row alignment fix */
+#contact .contact-card{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+#contact .contact-row{
+  display:grid;
+  grid-template-columns:90px minmax(0,1fr);
+  align-items:center;
+  gap:18px;
+  padding:18px 0;
+  border-bottom:1px solid rgba(11,79,58,.12);
+}
+#contact .contact-row small{
+  margin:0;
+  color:#7a7a7a;
+  font-size:13px;
+  white-space:nowrap;
+}
+#contact .contact-value{
+  display:block;
+  margin:0;
+  font-size:16px;
+  line-height:1.7;
+}
+#contact .phone-value{
+  direction:ltr;
+  unicode-bidi:embed;
+  text-align:left;
+  justify-self:start;
+}
+#contact .contact-actions{
+  display:flex;
+  gap:12px;
+  padding-top:22px;
+  margin-top:0;
+  flex-wrap:wrap;
+}
+@media(max-width:720px){
+  #contact .contact-row{
+    grid-template-columns:72px minmax(0,1fr);
+    gap:12px;
+    padding:16px 0;
+  }
+}
