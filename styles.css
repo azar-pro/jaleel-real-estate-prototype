@@ -39,3 +39,11 @@
   .image-frame{height:535px}
   .finder-wrap{padding-top:6px;padding-bottom:28px}
 }
+
+
+/* Hero final micro-adjustments */
+@media (min-width:1051px){
+  .hero.section-space{padding-bottom:40px}
+  .floating-property-card{bottom:18px}
+  .finder-wrap{padding-top:0;margin-top:-8px}
+}
