@@ -1229,3 +1229,99 @@
     height:208px;
   }
 }
+
+
+/* Mobile About + Owner CTA refinement */
+@media(max-width:720px){
+  .about.section-space{
+    padding-top:52px;
+    padding-bottom:40px;
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+    align-items:start;
+  }
+
+  .about-mark{
+    order:2;
+    justify-self:end;
+    font-size:64px;
+    line-height:.9;
+    letter-spacing:-.06em;
+    color:rgba(11,79,58,.045);
+    margin-top:-14px;
+  }
+
+  .about-grid>div:last-child{
+    order:1;
+  }
+
+  .about .eyebrow{
+    font-size:9px;
+  }
+
+  .about h2{
+    font-size:34px;
+    line-height:1.12;
+    max-width:100%;
+    margin-top:7px;
+  }
+
+  .about p{
+    max-width:none;
+    font-size:15px;
+    line-height:1.9;
+    margin-top:14px;
+  }
+
+  .about .text-link{
+    margin-top:14px;
+    font-size:14px;
+  }
+
+  .owner-cta{
+    padding:44px 0;
+  }
+
+  .owner-inner{
+    display:block;
+  }
+
+  .owner-cta h2{
+    font-size:34px;
+    line-height:1.12;
+    margin-top:7px;
+  }
+
+  .owner-cta p{
+    font-size:14px;
+    line-height:1.75;
+    margin-top:12px;
+    margin-bottom:0;
+  }
+
+  .owner-actions{
+    margin-top:18px;
+    gap:9px;
+    flex-direction:column;
+  }
+
+  .owner-actions .btn{
+    width:100%;
+    min-height:46px;
+    font-size:13px;
+  }
+}
+
+@media(max-width:390px){
+  .about h2,
+  .owner-cta h2{
+    font-size:31px;
+  }
+
+  .about-mark{
+    font-size:58px;
+  }
+}
