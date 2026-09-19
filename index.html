@@ -66,11 +66,11 @@
       <div class="container">
         <div class="finder-head"><div><span class="eyebrow">Property Finder</span><h2>ابحث عن فرصتك</h2></div><button class="filters-toggle" aria-expanded="false">خيارات البحث</button></div>
         <form class="finder" id="finderForm">
-          <label><span>نوع الطلب</span><select><option>بيع</option><option>إيجار</option><option>استثمار</option></select></label>
-          <label><span>نوع العقار</span><select><option>الكل</option><option>شقة</option><option>فيلا</option><option>أرض</option><option>تجاري</option></select></label>
-          <label><span>المدينة</span><select><option>الرياض</option></select></label>
-          <label><span>الحي</span><input type="text" placeholder="مثال: الرمال" /></label>
-          <label><span>السعر</span><select><option>أي سعر</option><option>حتى 1 مليون</option><option>1–5 مليون</option><option>5 مليون+</option></select></label>
+          <label><span>نوع الطلب</span><select name="demand"><option value="بيع">بيع</option><option value="إيجار">إيجار</option><option value="استثمار">استثمار</option></select></label>
+          <label><span>نوع العقار</span><select name="type"><option value="الكل">الكل</option><option value="شقة">شقة</option><option value="فيلا">فيلا</option><option value="أرض">أرض</option><option value="تجاري">تجاري</option></select></label>
+          <label><span>المدينة</span><select name="city"><option value="الرياض">الرياض</option></select></label>
+          <label><span>الحي</span><input name="district" type="text" placeholder="مثال: الرمال" /></label>
+          <label><span>السعر</span><select name="price"><option value="any">أي سعر</option><option value="under1">حتى 1 مليون</option><option value="1to5">1–5 مليون</option><option value="5plus">5 مليون+</option></select></label>
           <button class="btn btn-primary search-btn" type="submit">بحث</button>
         </form>
       </div>
@@ -79,28 +79,28 @@
     <section class="section-space" id="properties">
       <div class="container">
         <div class="section-title reveal"><div><span class="eyebrow">Selected Opportunities</span><h2>فرص مختارة</h2></div><p>نماذج من العروض المنشورة حاليًا لدى منظومة جليل العقارية.</p></div>
-        <div class="properties-grid">
-          <article class="property-card reveal">
+        <div class="finder-results" id="finderResults" aria-live="polite"></div><div class="properties-grid">
+          <article class="property-card reveal" data-demand="بيع استثمار" data-type="تجاري" data-district="الشفا" data-city="الرياض" data-price="10000000">
             <a href="property.html" class="property-image"><img src="assets/commercial.jpg" alt="عمارة للبيع في حي الشفا" /><span class="status">للبيع</span><span class="type-pill">عمارة</span></a>
             <div class="property-body"><div class="meta-line"><span>حي الشفا، الرياض</span><span>1,596 م²</span></div><h3>عمارة تجارية سكنية</h3><div class="features"><span>8 غرف</span><span>3 شقق</span><span>شارع 100م</span></div><div class="price-line"><strong>10,000,000 ر.س</strong><a href="property.html">عرض التفاصيل ↙</a></div></div>
           </article>
-          <article class="property-card reveal delay-1">
+          <article class="property-card reveal delay-1" data-demand="بيع" data-type="فيلا" data-district="المونسية" data-city="الرياض" data-price="4000000">
             <div class="property-image"><img src="assets/villa-monsiya.jpg" alt="فيلا للبيع في حي المونسية" /><span class="status">للبيع</span><span class="type-pill">فيلا</span></div>
             <div class="property-body"><div class="meta-line"><span>حي المونسية، الرياض</span><span>575 م²</span></div><h3>فيلا سكنية</h3><div class="features"><span>3 غرف</span><span>4 دورات مياه</span><span>شارع 15م</span></div><div class="price-line"><strong>4,000,000 ر.س</strong><a href="property.html">عرض التفاصيل ↙</a></div></div>
           </article>
-          <article class="property-card reveal delay-2">
+          <article class="property-card reveal delay-2" data-demand="إيجار" data-type="شقة" data-district="الرمال" data-city="الرياض" data-price="55000">
             <div class="property-image"><img src="assets/apartment-rimal-sauna.jpg" alt="شقة للإيجار في حي الرمال" /><span class="status rent">للإيجار</span><span class="type-pill">شقة</span></div>
             <div class="property-body"><div class="meta-line"><span>حي الرمال، الرياض</span><span>94 م²</span></div><h3>شقة ضمن مشروع سكني</h3><div class="features"><span>غرفتان</span><span>عوائل</span><span>عقار جديد</span></div><div class="price-line"><strong>55,000 ر.س / سنوي</strong><a href="property.html">عرض التفاصيل ↙</a></div></div>
           </article>
-          <article class="property-card reveal">
+          <article class="property-card reveal" data-demand="بيع استثمار" data-type="أرض" data-district="المهدية" data-city="الرياض" data-price="2832000">
             <div class="property-image"><img src="assets/land-mahdiyah.jpg" alt="أرض للبيع في حي المهدية" /><span class="status">للبيع</span><span class="type-pill">أرض</span></div>
             <div class="property-body"><div class="meta-line"><span>حي المهدية، الرياض</span><span>708 م²</span></div><h3>أرض سكنية</h3><div class="features"><span>واجهة شرقية</span><span>شارع 15م</span><span>4,000 ر.س / م²</span></div><div class="price-line"><strong>2,832,000 ر.س</strong><a href="property.html">عرض التفاصيل ↙</a></div></div>
           </article>
-          <article class="property-card reveal delay-1">
+          <article class="property-card reveal delay-1" data-demand="إيجار" data-type="شقة" data-district="الرمال" data-city="الرياض" data-price="60000">
             <div class="property-image"><img src="assets/apartment-rimal-building.jpg" alt="شقة للإيجار في حي الرمال" /><span class="status rent">للإيجار</span><span class="type-pill">شقة</span></div>
             <div class="property-body"><div class="meta-line"><span>حي الرمال، الرياض</span><span>92 م²</span></div><h3>شقة حديثة</h3><div class="features"><span>غرفتان</span><span>عوائل</span><span>عقار جديد</span></div><div class="price-line"><strong>60,000 ر.س / سنوي</strong><a href="property.html">عرض التفاصيل ↙</a></div></div>
           </article>
-          <article class="property-card reveal delay-2">
+          <article class="property-card reveal delay-2" data-demand="إيجار" data-type="شقة" data-district="السليمانية" data-city="الرياض" data-price="110000">
             <div class="property-image"><img src="assets/apartment-rimal-interior.jpg" alt="مساحة داخلية لشقة سكنية" /><span class="status rent">للإيجار</span><span class="type-pill">دور سكني</span></div>
             <div class="property-body"><div class="meta-line"><span>حي السليمانية، الرياض</span><span>153 م²</span></div><h3>دور سكني للعائلات</h3><div class="features"><span>3 غرف</span><span>غرفة خادمة</span><span>موقف خاص</span></div><div class="price-line"><strong>110,000 ر.س / سنوي</strong><a href="property.html">عرض التفاصيل ↙</a></div></div>
           </article>
