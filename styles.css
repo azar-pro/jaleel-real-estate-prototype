@@ -601,3 +601,63 @@
     padding-bottom:26px;
   }
 }
+
+
+/* Contact section refinement */
+#contact.section-space{
+  padding-top:70px;
+  padding-bottom:76px;
+}
+#contact .contact-grid{
+  gap:68px;
+  align-items:center;
+}
+#contact .contact-grid>div:first-child{
+  transform:translateY(-4px);
+}
+#contact .contact-card{
+  border-color:rgba(11,79,58,.12);
+  box-shadow:0 16px 42px rgba(30,58,48,.035);
+  padding:26px 28px;
+  gap:20px;
+}
+#contact .contact-card>div:not(.contact-actions){
+  grid-template-columns:96px 1fr;
+  gap:18px;
+  padding-bottom:17px;
+}
+#contact .contact-card small{
+  font-size:11px;
+}
+#contact .contact-card a,
+#contact .contact-card strong{
+  font-size:17px;
+}
+#contact .contact-actions{
+  margin-top:2px;
+  gap:10px;
+}
+@media(max-width:1050px){
+  #contact.section-space{
+    padding-top:62px;
+    padding-bottom:68px;
+  }
+  #contact .contact-grid{
+    gap:48px;
+  }
+}
+@media(max-width:720px){
+  #contact.section-space{
+    padding-top:54px;
+    padding-bottom:60px;
+  }
+  #contact .contact-grid{
+    gap:30px;
+  }
+  #contact .contact-grid>div:first-child{
+    transform:none;
+  }
+  #contact .contact-card{
+    padding:22px;
+  }
+}
