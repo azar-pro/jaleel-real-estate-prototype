@@ -154,3 +154,17 @@
 
 /* Investment image source correction */
 #investment .investment-image img{object-position:center 42%}
+
+
+/* Investment image clean crop */
+#investment .investment-image{overflow:hidden}
+#investment .investment-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:right center;
+  transform:scale(1.82);
+  transform-origin:right center;
+  filter:brightness(.95) contrast(1.04) saturate(.96);
+}
+#investment .investment-image:hover img{transform:scale(1.86)}
