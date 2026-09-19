@@ -286,3 +286,28 @@
     min-height:auto;
   }
 }
+
+
+/* Client requests definitive overlap fix */
+#requests .request-card{
+  display:flex;
+  flex-direction:column;
+  min-height:174px;
+}
+#requests .request-card>span{
+  flex:0 0 auto;
+}
+#requests .request-card h3{
+  margin:24px 0 6px;
+}
+#requests .request-card p{
+  margin:0;
+  line-height:1.55;
+}
+#requests .request-card small{
+  position:static;
+  display:block;
+  margin-top:6px;
+  color:var(--muted);
+  line-height:1.5;
+}
