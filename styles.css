@@ -25,3 +25,17 @@
   .hero-index{right:-22px;bottom:62px}
   .finder-wrap{margin-top:0}
 }
+
+
+/* Hero line lock — desktop final pass */
+@media (min-width:1051px){
+  .hero.section-space{padding-top:52px;padding-bottom:54px}
+  .hero-grid{grid-template-columns:1.04fr .96fr;gap:48px}
+  .hero-copy{max-width:none;width:100%;justify-self:stretch}
+  .hero-copy h1{font-size:clamp(52px,4.8vw,66px);line-height:1.09;margin:16px 0 20px}
+  .hero-line{display:block;white-space:nowrap}
+  .hero-copy p{max-width:560px}
+  .hero-note{margin-top:26px}
+  .image-frame{height:535px}
+  .finder-wrap{padding-top:6px;padding-bottom:28px}
+}
