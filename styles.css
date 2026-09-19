@@ -132,3 +132,21 @@
 #properties .property-card:nth-child(4) .property-image img{object-position:center 56%}
 #properties .property-card:nth-child(5) .property-image img{object-position:center 44%}
 #properties .property-card:nth-child(6) .property-image img{object-position:center 51%}
+
+
+/* Investment section refinement */
+#investment.section-space{padding-top:92px;padding-bottom:92px}
+#investment .investment-grid{gap:58px}
+#investment .investment-image{height:470px;border-radius:18px 110px 18px 18px}
+#investment .investment-image img{object-position:center 46%;filter:brightness(.94) contrast(1.045) saturate(.95)}
+#investment .investment-copy p{margin:18px 0 0;line-height:1.9}
+#investment .service-inline{margin:26px 0 24px}
+#investment .service-inline span{padding:13px 0}
+#investment .text-link{padding-top:4px;gap:10px}
+#investment .text-link b{font-size:14px}
+@media(max-width:720px){
+  #investment.section-space{padding-top:72px;padding-bottom:72px}
+  #investment .investment-image{height:340px;border-radius:18px 72px 18px 18px}
+  #investment .investment-copy p{margin-top:14px}
+  #investment .service-inline{margin:22px 0}
+}
