@@ -150,3 +150,7 @@
   #investment .investment-copy p{margin-top:14px}
   #investment .service-inline{margin:22px 0}
 }
+
+
+/* Investment image source correction */
+#investment .investment-image img{object-position:center 42%}
