@@ -1424,3 +1424,50 @@
     gap:9px 18px;
   }
 }
+
+
+/* Footer brand stacked treatment */
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.footer-brand-copy{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  text-align:right;
+}
+.footer-brand-copy strong{
+  font-size:16px;
+  line-height:1.35;
+  white-space:nowrap;
+}
+.footer-brand-copy span{
+  font:500 10px Manrope,sans-serif;
+  color:#92a39c;
+  line-height:1.35;
+  white-space:nowrap;
+}
+@media(max-width:720px){
+  .footer-brand{
+    flex-direction:column;
+    align-items:flex-end;
+    gap:10px;
+  }
+  .footer-brand img{
+    width:84px;
+    height:54px;
+  }
+  .footer-brand-copy{
+    align-items:flex-end;
+    text-align:right;
+    gap:4px;
+  }
+  .footer-brand-copy strong{
+    font-size:15px;
+  }
+  .footer-brand-copy span{
+    font-size:10px;
+  }
+}
