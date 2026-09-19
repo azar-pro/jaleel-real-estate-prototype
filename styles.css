@@ -47,3 +47,43 @@
   .floating-property-card{bottom:18px}
   .finder-wrap{padding-top:0;margin-top:-8px}
 }
+
+
+/* Property Finder refinement */
+@media (min-width:721px){
+  .finder-wrap{padding-top:18px;padding-bottom:54px}
+  .finder-head{margin-bottom:14px;align-items:flex-end}
+  .finder-head .eyebrow{font-size:10px;letter-spacing:.16em}
+  .finder-head h2{font-size:31px;line-height:1.2;margin-top:4px}
+
+  .finder{
+    border-radius:20px;
+    padding:9px;
+    min-height:82px;
+    box-shadow:0 18px 42px rgba(36,52,45,.055);
+  }
+  .finder label{
+    min-height:62px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:7px 16px;
+  }
+  .finder label span{
+    font-size:10px;
+    margin-bottom:3px;
+    color:#7b837f;
+  }
+  .finder select,.finder input{
+    font-size:14px;
+    font-weight:600;
+    line-height:1.4;
+  }
+  .search-btn{
+    min-width:112px;
+    min-height:64px;
+    align-self:center;
+    border-radius:14px;
+    font-size:14px;
+  }
+}
