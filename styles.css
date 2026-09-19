@@ -1042,3 +1042,94 @@
     grid-template-columns:1fr;
   }
 }
+
+
+/* Mobile Hero final proportion pass */
+@media(max-width:720px){
+  .hero{
+    padding-top:18px;
+    padding-bottom:46px;
+  }
+
+  .hero-grid{
+    gap:18px;
+  }
+
+  .hero-media{
+    padding-bottom:8px;
+  }
+
+  .image-frame{
+    height:282px;
+    border-radius:46px 14px 14px 14px;
+  }
+
+  .floating-property-card{
+    left:14px;
+    bottom:-10px;
+    width:176px;
+    padding:12px 13px;
+    border-radius:13px;
+  }
+
+  .floating-property-card .mini-label{
+    font-size:9px;
+    margin-bottom:2px;
+  }
+
+  .floating-property-card strong{
+    font-size:15.5px;
+    line-height:1.3;
+  }
+
+  .floating-property-card>div:nth-of-type(2){
+    font-size:10px;
+    line-height:1.5;
+  }
+
+  .mini-grid{
+    margin-top:7px;
+    padding-top:7px;
+    font-size:9px;
+    gap:6px;
+  }
+
+  .hero-copy{
+    padding-top:4px;
+  }
+
+  .hero-copy h1{
+    font-size:35px;
+    line-height:1.06;
+    margin:12px 0 14px;
+    max-width:100%;
+  }
+
+  .hero-copy p{
+    font-size:14.5px;
+    line-height:1.78;
+  }
+
+  .hero-actions{
+    margin-top:18px;
+  }
+
+  .hero-note{
+    margin-top:16px;
+  }
+}
+
+@media(max-width:390px){
+  .image-frame{
+    height:268px;
+  }
+
+  .floating-property-card{
+    width:168px;
+    left:10px;
+  }
+
+  .hero-copy h1{
+    font-size:33px;
+  }
+}
