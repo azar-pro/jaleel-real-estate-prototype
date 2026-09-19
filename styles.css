@@ -1644,3 +1644,74 @@
     font-size:15px !important;
   }
 }
+
+
+/* Mobile Contact final polish */
+@media(max-width:720px){
+  #contact.section-space{
+    padding-top:50px;
+    padding-bottom:56px;
+  }
+
+  #contact .contact-grid{
+    gap:24px;
+  }
+
+  #contact .contact-grid>div:first-child{
+    transform:none;
+  }
+
+  #contact .contact h2,
+  #contact h2{
+    font-size:31px;
+    line-height:1.12;
+    margin-top:7px;
+  }
+
+  #contact .contact p,
+  #contact p{
+    margin-top:10px;
+    font-size:14px;
+    line-height:1.75;
+  }
+
+  #contact .contact-card{
+    padding:20px 20px 22px;
+    border-radius:16px;
+  }
+
+  #contact .contact-row{
+    grid-template-columns:68px minmax(0,1fr);
+    gap:10px;
+    padding:15px 0;
+  }
+
+  #contact .contact-row small{
+    font-size:11px;
+  }
+
+  #contact .contact-value{
+    font-size:15px;
+    line-height:1.6;
+  }
+
+  #contact .contact-actions{
+    padding-top:18px;
+    gap:9px;
+  }
+
+  #contact .contact-actions .btn{
+    min-height:46px;
+    font-size:13px;
+  }
+}
+
+@media(max-width:390px){
+  #contact h2{
+    font-size:29px;
+  }
+
+  #contact .contact-card{
+    padding:18px;
+  }
+}
