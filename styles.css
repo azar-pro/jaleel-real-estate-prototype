@@ -1133,3 +1133,99 @@
     font-size:33px;
   }
 }
+
+
+/* Mobile Finder + Featured opportunities spacing */
+@media(max-width:720px){
+  .finder-wrap{
+    margin-top:0;
+    padding-bottom:18px;
+  }
+
+  .finder-wrap .container{
+    display:block;
+  }
+
+  .finder-head{
+    margin-bottom:10px;
+    align-items:center;
+    gap:14px;
+  }
+
+  .finder-head h2{
+    font-size:25px;
+    line-height:1.2;
+    margin:3px 0 0;
+  }
+
+  .finder-head .eyebrow{
+    font-size:9px;
+    letter-spacing:.13em;
+  }
+
+  .filters-toggle{
+    flex:0 0 auto;
+    padding:9px 14px;
+    font-size:13px;
+    background:#fff;
+  }
+
+  .finder{
+    margin-top:10px;
+  }
+
+  .finder:not(.open){
+    margin:0;
+  }
+
+  #properties.section-space{
+    padding-top:50px;
+  }
+
+  #properties .section-title{
+    margin-bottom:24px;
+  }
+
+  #properties .section-title h2{
+    font-size:38px;
+    line-height:1.08;
+  }
+
+  #properties .section-title p{
+    margin-top:10px;
+    font-size:14px;
+    line-height:1.75;
+  }
+
+  #properties .properties-grid{
+    gap:18px;
+  }
+
+  #properties .property-image{
+    height:220px;
+  }
+
+  #properties .property-body{
+    padding:18px;
+  }
+
+  #properties .property-body h3{
+    font-size:20px;
+    margin:8px 0 10px;
+  }
+
+  #properties .price-line{
+    margin-top:15px;
+    padding-top:13px;
+  }
+}
+
+@media(max-width:390px){
+  #properties.section-space{
+    padding-top:44px;
+  }
+
+  #properties .property-image{
+    height:208px;
+  }
+}
