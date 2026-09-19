@@ -582,3 +582,22 @@
     gap:10px;
   }
 }
+
+
+/* Tighten transition from About to Owner CTA */
+.about.section-space{
+  padding-bottom:34px;
+}
+.owner-cta{
+  margin-top:0;
+}
+@media(max-width:1050px){
+  .about.section-space{
+    padding-bottom:30px;
+  }
+}
+@media(max-width:720px){
+  .about.section-space{
+    padding-bottom:26px;
+  }
+}
