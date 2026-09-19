@@ -189,3 +189,75 @@
   transition:transform .6s ease;
 }
 #investment .investment-image:hover img{transform:scale(1.03)}
+
+
+/* Client requests refinement */
+#requests.section-space{
+  padding-top:68px;
+  padding-bottom:74px;
+}
+#requests .section-title{
+  margin-bottom:26px;
+  align-items:flex-end;
+  gap:36px;
+}
+#requests .section-title>div{
+  max-width:560px;
+}
+#requests .section-title p{
+  max-width:430px;
+  line-height:1.8;
+  margin:0;
+}
+#requests .requests-grid{
+  gap:16px;
+}
+#requests .request-card{
+  min-height:160px;
+  padding:22px 24px 20px;
+  border-radius:16px;
+}
+#requests .request-card .num{
+  font-size:10px;
+  opacity:.5;
+  margin-bottom:22px;
+}
+#requests .request-card h3{
+  font-size:20px;
+  line-height:1.35;
+  margin-bottom:8px;
+}
+#requests .request-card p{
+  line-height:1.65;
+}
+#requests .request-cta{
+  margin-top:18px;
+  padding:22px 26px;
+  border-radius:16px;
+}
+#requests .request-cta h3{
+  margin-bottom:4px;
+}
+@media(max-width:1050px){
+  #requests.section-space{
+    padding-top:60px;
+    padding-bottom:68px;
+  }
+}
+@media(max-width:720px){
+  #requests.section-space{
+    padding-top:52px;
+    padding-bottom:60px;
+  }
+  #requests .section-title{
+    margin-bottom:22px;
+    gap:14px;
+  }
+  #requests .request-card{
+    min-height:auto;
+    padding:20px;
+  }
+  #requests .request-card .num{
+    margin-bottom:16px;
+  }
+}
