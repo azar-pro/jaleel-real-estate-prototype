@@ -777,3 +777,50 @@
     padding-top:18px;
   }
 }
+
+
+/* Footer logo contrast and bottom spacing fix */
+.site-footer .footer-brand img{
+  background:transparent;
+  filter:brightness(1.95) saturate(.72) contrast(.92);
+  opacity:.98;
+}
+.site-footer .footer-brand{
+  position:relative;
+}
+.site-footer .footer-brand::before{
+  content:"";
+  position:absolute;
+  width:112px;
+  height:70px;
+  right:-8px;
+  border-radius:50%;
+  background:rgba(213,181,124,.055);
+  filter:blur(18px);
+  pointer-events:none;
+}
+.site-footer .footer-brand img,
+.site-footer .footer-brand p{
+  position:relative;
+  z-index:1;
+}
+.site-footer .footer-bottom{
+  position:relative;
+  z-index:2;
+  margin-top:36px;
+  min-height:34px;
+}
+.site-footer .footer-bottom span,
+.site-footer .footer-bottom small{
+  line-height:1.5;
+}
+@media(max-width:720px){
+  .site-footer .footer-brand::before{
+    width:96px;
+    height:62px;
+  }
+  .site-footer .footer-bottom{
+    min-height:auto;
+    margin-top:30px;
+  }
+}
