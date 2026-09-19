@@ -125,3 +125,10 @@
   #properties .section-title{margin-bottom:24px}
   #properties .property-image{height:250px}
 }
+
+
+/* Featured opportunities final micro-adjustments */
+#properties.section-space{padding-top:54px}
+#properties .property-card:nth-child(4) .property-image img{object-position:center 56%}
+#properties .property-card:nth-child(5) .property-image img{object-position:center 44%}
+#properties .property-card:nth-child(6) .property-image img{object-position:center 51%}
