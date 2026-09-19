@@ -824,3 +824,22 @@
     margin-top:30px;
   }
 }
+
+
+/* Working property finder results */
+.finder-results{
+  min-height:24px;
+  margin:-18px 0 20px;
+  font-size:13px;
+  color:var(--green);
+  font-weight:600;
+}
+.finder-results:empty{
+  display:none;
+}
+.finder-results.is-empty{
+  color:#7b5b48;
+}
+#properties .property-card[hidden]{
+  display:none !important;
+}
